@@ -38,6 +38,17 @@
     addEventListener('scroll', mark, { passive: true });
   }
 
+  // Tables never get cut off: one that doesn't fit becomes a stack of cards
+  const fitTables = () => document.querySelectorAll('.d-doc .table').forEach((box) => {
+    const labels = [...box.querySelectorAll('thead th')].map((th) => th.textContent.trim());
+    box.querySelectorAll('tbody tr').forEach((tr) => [...tr.children].forEach((td, i) => { td.dataset.label = labels[i] ?? ''; }));
+    box.classList.remove('stack');
+    if (box.scrollWidth > box.clientWidth + 1) box.classList.add('stack');
+  });
+  fitTables();
+  addEventListener('resize', fitTables);
+  if (document.fonts) document.fonts.ready.then(fitTables);
+
   // Reading progress, and the section ruler on the stripes
   const bar = $('dProgress');
   const sections = [...document.querySelectorAll('.d-doc h2, .cl-item')].slice(0, 26);

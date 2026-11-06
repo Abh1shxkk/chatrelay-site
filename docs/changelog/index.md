@@ -44,21 +44,6 @@ The ChatRelay GitHub App has a new name, so the **Install** link in the sign-in 
 
 **Copy report** copies everything as Markdown. From the command line: `chatrelay usage --days 90`. It is worked out on your PC; nothing is sent. Antigravity, Cursor and Kiro don't record tokens, so they show "–".
 
-#### Every name is now ChatRelay
-
-Until now the app kept some of its old Claude Sync names inside. From this version everything is ChatRelay: the app and its install folder (`%LOCALAPPDATA%\ChatRelay`), the `chatrelay` command, the `~/.chatrelay` data folder, `CHATRELAY_*` environment variables and `.chatrelay.json` project files. The web viewer moved to https://abh1shxkk.github.io/chatrelay-web/.
-
-**This version does not update Claude Sync in place.** It installs as a new app. Move over once on each PC:
-
-1. Quit Claude Sync (tray → **Quit**) and uninstall it in Windows **Settings → Apps**.
-2. Rename the folder `~/.claude-sync` to `~/.chatrelay`. Your settings, sync state and backups come with it.
-3. Install ChatRelay, then turn **Auto-sync** on. This replaces the old Claude Sync hooks in `~/.claude/settings.json`.
-4. Add your GitHub token and API keys again (**Settings → Secrets**, or sign in with GitHub).
-5. Rename any `.claude-sync.json` in your project folders to `.chatrelay.json`.
-6. On Android, uninstall the old app before installing the new APK.
-
-Your history in GitHub or the sync folder does not change; nothing needs to be uploaded again.
-
 ## v0.5.9
 
 2026-11-05
@@ -104,7 +89,7 @@ Gemini CLI isn't supported. Google no longer lets personal accounts sign in to i
 
 #### Other
 
-- Command line: `claude-sync storage [--compact]`.
+- Command line: `chatrelay storage [--compact]`.
 
 ## v0.5.6
 
@@ -132,8 +117,8 @@ Gemini CLI isn't supported. Google no longer lets personal accounts sign in to i
 
 #### New
 
-- **Search every conversation.** Open **Search** in the activity bar (**Ctrl+Shift+F**) and type a few words. ChatRelay finds every prompt and answer that contains all of them, in every project and every tool (Claude Code and Codex), newest first, with the words highlighted. Click a match to open that conversation. CLI: `claude-sync search <words>`.
-- **Keep a project on this PC only.** Click **Don't sync** on a project's page (or in the Simple view). Nothing from it is uploaded, and it is not downloaded automatically. **Turn sync on** undoes it. CLI: `claude-sync exclude <dir>`.
+- **Search every conversation.** Open **Search** in the activity bar (**Ctrl+Shift+F**) and type a few words. ChatRelay finds every prompt and answer that contains all of them, in every project and every tool (Claude Code and Codex), newest first, with the words highlighted. Click a match to open that conversation. CLI: `chatrelay search <words>`.
+- **Keep a project on this PC only.** Click **Don't sync** on a project's page (or in the Simple view). Nothing from it is uploaded, and it is not downloaded automatically. **Turn sync on** undoes it. CLI: `chatrelay exclude <dir>`.
 - **Summaries with no API key.** Pick "Claude Code · Sonnet / Opus (your login)" or "Codex (your ChatGPT login)" to write summaries through the Claude Code or Codex already signed in on this PC. Nothing is saved to that tool's history.
 
 #### Fixed
@@ -163,7 +148,7 @@ Summaries can now use OpenRouter, including free models (no Anthropic key needed
 
 2026-10-20
 
-Claude Sync is now ChatRelay: same app, new name, because it syncs chats from more than one AI tool (Claude Code and Codex). Your settings, history and auto-sync keep working. New full documentation in 10 languages.
+Small fixes.
 
 ## v0.5.0
 
@@ -175,7 +160,7 @@ Codex: only new lines are uploaded/downloaded; when both PCs changed a chat both
 
 2026-10-20
 
-Codex support: your Codex chats (VS Code extension and terminal) now sync with your projects, next to Claude Code. Each conversation shows a Claude or Codex badge, projects can be filtered by tool, and Settings shows which AI tools were found. Codex chats are only written while Codex is closed. Update Claude Sync on every PC you sync with.
+Small fixes.
 
 ## v0.3.4
 
@@ -193,7 +178,7 @@ Check for updates now shows what it is doing (a spinner while checking, then 'Up
 
 2026-10-20
 
-Faster sync: after a conversation's first upload, only the new messages are sent and downloaded (a few KB instead of the whole file). Fixes conversations showing as not synced (orange dot) right after a pull. Update Claude Sync on every PC you sync with.
+Small fixes.
 
 ## v0.3.0
 

@@ -156,6 +156,14 @@
     const line = typed.closest('.type-line');
     const caret = line.querySelector('.type-caret');
     const phrases = ['on every device.', 'in Claude Code.', 'in Codex.', 'in Cursor.', 'in Kiro.', 'in Antigravity.', 'on your phone.'];
+    // Each phrase has its own colours, blended letter by letter.
+    const palette = [['#7d1b0c', '#ff4f00', '#ffb224'], ['#b8532e', '#e8895f'], ['#2f6bff', '#8b5cf6'], ['#21201c', '#7a7972'], ['#7c3aed', '#c084fc'], ['#1a73e8', '#34a853', '#fbbc05', '#ea4335'], ['#ff4f00', '#ffb224']];
+    const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+    const blend = (stops, t) => {
+      const x = t * (stops.length - 1), i = Math.min(Math.floor(x), stops.length - 2), f = x - i;
+      const a = rgb(stops[i]), b = rgb(stops[i + 1]);
+      return `rgb(${a.map((v, k) => Math.round(v + (b[k] - v) * f)).join(',')})`;
+    };
     let p = 0;
     let n = 0;
     let chars = [];
@@ -168,6 +176,8 @@
         typed.appendChild(s);
         return s;
       });
+      chars.forEach((s, i) => { s.style.color = blend(palette[p], i / Math.max(1, chars.length - 1)); });
+      caret.style.background = palette[p][palette[p].length - 1];
     };
     const place = () => {
       if (!chars.length) return;

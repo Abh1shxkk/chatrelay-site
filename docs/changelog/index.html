@@ -86,18 +86,6 @@
 <li>Your projects and your longest conversations; click one to open it.</li>
 </ul>
 <p><strong>Copy report</strong> copies everything as Markdown. From the command line: <code>chatrelay usage --days 90</code>. It is worked out on your PC; nothing is sent. Antigravity, Cursor and Kiro don&#39;t record tokens, so they show &quot;–&quot;.</p>
-<h4>Every name is now ChatRelay</h4>
-<p>Until now the app kept some of its old Claude Sync names inside. From this version everything is ChatRelay: the app and its install folder (<code>%LOCALAPPDATA%\ChatRelay</code>), the <code>chatrelay</code> command, the <code>~/.chatrelay</code> data folder, <code>CHATRELAY_*</code> environment variables and <code>.chatrelay.json</code> project files. The web viewer moved to <a href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">https://abh1shxkk.github.io/chatrelay-web/</a>.</p>
-<p><strong>This version does not update Claude Sync in place.</strong> It installs as a new app. Move over once on each PC:</p>
-<ol>
-<li>Quit Claude Sync (tray → <strong>Quit</strong>) and uninstall it in Windows <strong>Settings → Apps</strong>.</li>
-<li>Rename the folder <code>~/.claude-sync</code> to <code>~/.chatrelay</code>. Your settings, sync state and backups come with it.</li>
-<li>Install ChatRelay, then turn <strong>Auto-sync</strong> on. This replaces the old Claude Sync hooks in <code>~/.claude/settings.json</code>.</li>
-<li>Add your GitHub token and API keys again (<strong>Settings → Secrets</strong>, or sign in with GitHub).</li>
-<li>Rename any <code>.claude-sync.json</code> in your project folders to <code>.chatrelay.json</code>.</li>
-<li>On Android, uninstall the old app before installing the new APK.</li>
-</ol>
-<p>Your history in GitHub or the sync folder does not change; nothing needs to be uploaded again.</p>
 <a class="cl-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/tag/v0.6.0" target="_blank" rel="noopener">Downloads for v0.6.0 ↗</a></div>
     </details>
 <details class="cl-item" id="v0-5-9" data-minor="v0.5">
@@ -139,7 +127,7 @@
 </ul>
 <h4>Other</h4>
 <ul>
-<li>Command line: <code>claude-sync storage [--compact]</code>.</li>
+<li>Command line: <code>chatrelay storage [--compact]</code>.</li>
 </ul>
 <a class="cl-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/tag/v0.5.7" target="_blank" rel="noopener">Downloads for v0.5.7 ↗</a></div>
     </details>
@@ -167,8 +155,8 @@
       <summary><span class="cl-dot" aria-hidden="true"></span><span class="cl-tag">v0.5.5</span><span class="cl-title">New</span><time>2026-11-04</time><span class="cl-chev" aria-hidden="true"></span></summary>
       <div class="cl-body"><h4>New</h4>
 <ul>
-<li><strong>Search every conversation.</strong> Open <strong>Search</strong> in the activity bar (<strong>Ctrl+Shift+F</strong>) and type a few words. ChatRelay finds every prompt and answer that contains all of them, in every project and every tool (Claude Code and Codex), newest first, with the words highlighted. Click a match to open that conversation. CLI: <code>claude-sync search &lt;words&gt;</code>.</li>
-<li><strong>Keep a project on this PC only.</strong> Click <strong>Don&#39;t sync</strong> on a project&#39;s page (or in the Simple view). Nothing from it is uploaded, and it is not downloaded automatically. <strong>Turn sync on</strong> undoes it. CLI: <code>claude-sync exclude &lt;dir&gt;</code>.</li>
+<li><strong>Search every conversation.</strong> Open <strong>Search</strong> in the activity bar (<strong>Ctrl+Shift+F</strong>) and type a few words. ChatRelay finds every prompt and answer that contains all of them, in every project and every tool (Claude Code and Codex), newest first, with the words highlighted. Click a match to open that conversation. CLI: <code>chatrelay search &lt;words&gt;</code>.</li>
+<li><strong>Keep a project on this PC only.</strong> Click <strong>Don&#39;t sync</strong> on a project&#39;s page (or in the Simple view). Nothing from it is uploaded, and it is not downloaded automatically. <strong>Turn sync on</strong> undoes it. CLI: <code>chatrelay exclude &lt;dir&gt;</code>.</li>
 <li><strong>Summaries with no API key.</strong> Pick &quot;Claude Code · Sonnet / Opus (your login)&quot; or &quot;Codex (your ChatGPT login)&quot; to write summaries through the Claude Code or Codex already signed in on this PC. Nothing is saved to that tool&#39;s history.</li>
 </ul>
 <h4>Fixed</h4>
@@ -194,8 +182,8 @@
 <a class="cl-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/tag/v0.5.2" target="_blank" rel="noopener">Downloads for v0.5.2 ↗</a></div>
     </details>
 <details class="cl-item" id="v0-5-1" data-minor="v0.5">
-      <summary><span class="cl-dot" aria-hidden="true"></span><span class="cl-tag">v0.5.1</span><span class="cl-title">Claude Sync is now ChatRelay: same app, new name, because it syncs chats from mo</span><time>2026-10-20</time><span class="cl-chev" aria-hidden="true"></span></summary>
-      <div class="cl-body"><p>Claude Sync is now ChatRelay: same app, new name, because it syncs chats from more than one AI tool (Claude Code and Codex). Your settings, history and auto-sync keep working. New full documentation in 10 languages.</p>
+      <summary><span class="cl-dot" aria-hidden="true"></span><span class="cl-tag">v0.5.1</span><span class="cl-title">Small fixes.</span><time>2026-10-20</time><span class="cl-chev" aria-hidden="true"></span></summary>
+      <div class="cl-body"><p>Small fixes.</p>
 <a class="cl-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/tag/v0.5.1" target="_blank" rel="noopener">Downloads for v0.5.1 ↗</a></div>
     </details>
 <details class="cl-item" id="v0-5-0" data-minor="v0.5">
@@ -204,8 +192,8 @@
 <a class="cl-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/tag/v0.5.0" target="_blank" rel="noopener">Downloads for v0.5.0 ↗</a></div>
     </details>
 <details class="cl-item" id="v0-4-0" data-minor="v0.4">
-      <summary><span class="cl-dot" aria-hidden="true"></span><span class="cl-tag">v0.4.0</span><span class="cl-title">Codex support: your Codex chats (VS Code extension and terminal) now sync with y</span><time>2026-10-20</time><span class="cl-chev" aria-hidden="true"></span></summary>
-      <div class="cl-body"><p>Codex support: your Codex chats (VS Code extension and terminal) now sync with your projects, next to Claude Code. Each conversation shows a Claude or Codex badge, projects can be filtered by tool, and Settings shows which AI tools were found. Codex chats are only written while Codex is closed. Update Claude Sync on every PC you sync with.</p>
+      <summary><span class="cl-dot" aria-hidden="true"></span><span class="cl-tag">v0.4.0</span><span class="cl-title">Small fixes.</span><time>2026-10-20</time><span class="cl-chev" aria-hidden="true"></span></summary>
+      <div class="cl-body"><p>Small fixes.</p>
 <a class="cl-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/tag/v0.4.0" target="_blank" rel="noopener">Downloads for v0.4.0 ↗</a></div>
     </details>
 <details class="cl-item" id="v0-3-4" data-minor="v0.3">
@@ -219,8 +207,8 @@
 <a class="cl-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/tag/v0.3.3" target="_blank" rel="noopener">Downloads for v0.3.3 ↗</a></div>
     </details>
 <details class="cl-item" id="v0-3-2" data-minor="v0.3">
-      <summary><span class="cl-dot" aria-hidden="true"></span><span class="cl-tag">v0.3.2</span><span class="cl-title">Faster sync: after a conversation's first upload, only the new messages are sent</span><time>2026-10-20</time><span class="cl-chev" aria-hidden="true"></span></summary>
-      <div class="cl-body"><p>Faster sync: after a conversation&#39;s first upload, only the new messages are sent and downloaded (a few KB instead of the whole file). Fixes conversations showing as not synced (orange dot) right after a pull. Update Claude Sync on every PC you sync with.</p>
+      <summary><span class="cl-dot" aria-hidden="true"></span><span class="cl-tag">v0.3.2</span><span class="cl-title">Small fixes.</span><time>2026-10-20</time><span class="cl-chev" aria-hidden="true"></span></summary>
+      <div class="cl-body"><p>Small fixes.</p>
 <a class="cl-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/tag/v0.3.2" target="_blank" rel="noopener">Downloads for v0.3.2 ↗</a></div>
     </details>
 <details class="cl-item" id="v0-3-0" data-minor="v0.3">
@@ -244,7 +232,7 @@
       <div><h4>Docs</h4><ul><li><a href="../../docs/first-time-setup/">First-time setup</a></li><li><a href="../../docs/cli/">CLI reference</a></li><li><a href="../../docs/troubleshooting/">Troubleshooting</a></li><li><a href="../../docs/build-from-source/">Build from source</a></li><li><a href="../../docs/adapter-guide/">Adapter guide</a></li></ul></div>
       <div><h4>Connect</h4><ul><li><a href="mailto:abhichauhan200504@gmail.com">Email</a></li><li><a href="https://linkedin.com/in/abhishek-chauhan-880496394" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://x.com/abh1shxkk" target="_blank" rel="noopener">X</a></li><li><a href="https://github.com/Abh1shxkk" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://abhishekdev.online" target="_blank" rel="noopener">Website</a></li></ul></div>
     </div>
-    <div class="footer-bottom"><span>© 2026 Abhishek Chauhan</span><a href="../../docs/license/">MIT license</a><a href="../../docs/privacy/">Privacy</a><a href="../../docs/about-the-rename/">About the rename</a><span class="live"><span class="dot ok"></span> Free and open source</span></div>
+    <div class="footer-bottom"><span>© 2026 Abhishek Chauhan</span><a href="../../docs/license/">MIT license</a><a href="../../docs/privacy/">Privacy</a><span class="live"><span class="dot ok"></span> Free and open source</span></div>
   </div></footer>
 </div></div></div></div>
 <div class="d-theme" role="group" aria-label="Theme">

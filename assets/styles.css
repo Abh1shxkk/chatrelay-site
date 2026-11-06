@@ -1013,3 +1013,12 @@ code.k { font-size: .86em; background: var(--soft); border: 1px solid var(--line
   .assist { left: auto; right: 24px; bottom: 24px; }
   .fmain { margin-right: 346px; }
 }
+
+/* Coloured hero text */
+.hero-grad { background: linear-gradient(90deg, var(--m), var(--ro) 48%, var(--o) 78%, #e9a11a); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.hero-sub a.tn { font-weight: 500; text-decoration-color: currentColor; text-decoration-thickness: 1px; }
+.hero-sub a.tn-claude { color: #b8532e; }
+.hero-sub a.tn-codex { color: #2f6bff; }
+.hero-sub a.tn-cursor { color: #21201c; }
+.hero-sub a.tn-kiro { color: #7c3aed; }
+.hero-sub a.tn-ag { color: #1e8e3e; }
