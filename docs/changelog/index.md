@@ -2,6 +2,23 @@
 
 What changed in each release.
 
+## v0.6.4
+
+2026-11-06
+
+#### Real logos and a livelier app
+
+- **Real tool logos everywhere.** Claude Code, Codex, Antigravity, Cursor and Kiro now show their own logo in project lists, chats, Usage, Settings and Sync.
+- **Filter by tool on the home screen.** Each tool has a pill with its conversation count. Click one to see only its projects.
+- **Small animations throughout.** Sliding markers, pressed buttons, lists that come in row by row, numbers that count up and charts that rise. They switch off if your system asks for less motion.
+- **Toasts** slide in and out and show how long they will stay. **Copying a message** shows a tick right where you clicked.
+
+#### Small fixes
+
+- Faint text and borders are easier to read in both themes.
+- While the first scan runs, the home screen shows loading rows instead of saying you have no conversations.
+- The tool filter in a project wraps on small screens instead of running off the edge.
+
 ## v0.6.3
 
 2026-11-06
