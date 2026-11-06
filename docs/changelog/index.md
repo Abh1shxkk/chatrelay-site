@@ -148,7 +148,7 @@ Summaries can now use OpenRouter, including free models (no Anthropic key needed
 
 2026-10-20
 
-Small fixes.
+### What's new in 0.5.1
 
 ## v0.5.0
 
