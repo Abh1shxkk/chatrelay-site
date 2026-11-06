@@ -2,6 +2,15 @@
 
 What changed in each release.
 
+## v0.6.5
+
+2026-11-06
+
+#### A new icon
+
+- **ChatRelay has a new icon:** two overlapping chat bubbles, in clean black and white. You'll see it on Windows, in the tray, on Android and on the web.
+- **Inside the app** it stays still, and the two bubbles move gently while something is syncing.
+
 ## v0.6.4
 
 2026-11-06
