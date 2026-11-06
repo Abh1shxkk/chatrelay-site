@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ChatRelay | Sync your AI coding chats between PCs and tools</title>
-  <meta name="description" content="ChatRelay syncs Claude Code and Codex chat history between your computers, rewrites every file path for the new machine, and hands a project's context to the next AI tool. Free, open source, no server.">
+  <title>ChatRelay | Sync your AI coding chats between devices and tools</title>
+  <meta name="description" content="ChatRelay keeps your AI coding chats from Claude Code, Codex, Cursor, Kiro and Antigravity on all your devices, rewrites every file path for the new machine, and hands a project's context to the next AI tool. Free, open source, no server.">
   <meta name="theme-color" content="#f9f9f8">
-  <meta property="og:title" content="ChatRelay: your AI coding chats on every PC">
-  <meta property="og:description" content="Sync Claude Code and Codex history between PCs, fix every path, search everything and continue in another tool.">
+  <meta property="og:title" content="ChatRelay: your AI coding chats on every device">
+  <meta property="og:description" content="Your AI coding chats from Claude Code, Codex, Cursor, Kiro and Antigravity, on every device. Search everything and continue in another tool.">
   <meta property="og:image" content="assets/icon.png">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="assets/icon.png">
@@ -75,14 +75,15 @@
       <a href="#cli">CLI</a>
       <a href="#download">Download</a>
       <a href="#faq">FAQ</a>
+      <a href="docs/overview/">Docs</a>
     </nav>
     <div class="nav-cta">
-      <a class="nav-gh" href="https://github.com/Abh1shxkk/claude-sync-releases" target="_blank" rel="noopener">
+      <a class="nav-gh" href="https://github.com/Abh1shxkk/chatrelay-releases" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
         GitHub
       </a>
-      <a class="btn btn-light" href="https://abh1shxkk.github.io/claude-sync-web/" target="_blank" rel="noopener">Web viewer</a>
-      <a class="btn btn-dark" href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener">
+      <a class="btn btn-light" href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">Web viewer</a>
+      <a class="btn btn-dark" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">
         <svg class="ico"><use href="#i-download"/></svg> Download
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
@@ -97,8 +98,9 @@
     <a href="#cli">CLI</a>
     <a href="#download">Download</a>
     <a href="#faq">FAQ</a>
-    <a href="https://abh1shxkk.github.io/claude-sync-web/" target="_blank" rel="noopener">Web viewer ↗</a>
-    <a href="https://github.com/Abh1shxkk/claude-sync-releases" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="docs/overview/">Docs</a>
+    <a href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">Web viewer ↗</a>
+    <a href="https://github.com/Abh1shxkk/chatrelay-releases" target="_blank" rel="noopener">GitHub ↗</a>
   </div>
 </header>
 
@@ -108,21 +110,21 @@
 <section class="hero">
   <div class="hero-stripes" aria-hidden="true"><i class="hs-v"></i><i class="hs-c1"></i><i class="hs-h"></i><i class="hs-c2"></i></div>
   <div class="wrap">
-    <a class="hero-pill" href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener">
-      <b>New</b> Now reads Cursor, Kiro and Antigravity chats too
+    <a class="hero-pill" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">
+      <b>New</b> Now reads Cursor CLI and Kiro CLI chats too
       <svg class="ico" style="width:13px;height:13px"><use href="#i-arrow"/></svg>
     </a>
-    <h1 aria-label="Your AI coding chats, on every PC and in every tool.">Your AI coding chats,<span class="type-line" aria-hidden="true"><span class="type-clip" id="typeClip"><span class="serif" id="typed">on every PC.</span></span><i class="type-caret"></i></span></h1>
+    <h1 aria-label="Your AI coding chats, on every device and in every tool.">Your AI coding chats,<span class="type-line" aria-hidden="true"><span class="type-clip" id="typeClip"><span class="serif" id="typed">on every device.</span></span><i class="type-caret"></i></span></h1>
     <p class="hero-sub">
-      ChatRelay syncs <a href="#tools">Claude Code</a> and <a href="#tools">Codex</a> history between your computers,
+      ChatRelay keeps your chats from <a href="#tools">Claude Code, Codex, Cursor, Kiro and Antigravity</a> on all your devices,
       rewrites every file path for the new machine, and <a href="#handoff">hands a project's context</a> to the next AI tool.
       Your storage, no server.
     </p>
     <div class="hero-cta">
-      <a class="btn btn-dark btn-lg" href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener">
+      <a class="btn btn-dark btn-lg" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">
         <svg class="ico"><use href="#i-download"/></svg> Download for Windows
       </a>
-      <a class="btn btn-light btn-lg" href="https://abh1shxkk.github.io/claude-sync-web/" target="_blank" rel="noopener">
+      <a class="btn btn-light btn-lg" href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">
         <svg class="ico"><use href="#i-globe"/></svg> Open the web viewer
       </a>
     </div>
@@ -146,7 +148,7 @@
         </div>
         <div class="frame-body">
           <aside class="fside" aria-hidden="true">
-            <div class="fside-top"><img src="assets/icon.png" alt="" width="18" height="18">HOME-LAPTOP<svg class="ico"><use href="#i-search"/></svg></div>
+            <div class="fside-top"><img src="assets/icon.png" alt="" width="18" height="18">LAPTOP<svg class="ico"><use href="#i-search"/></svg></div>
             <span class="on"><svg class="ico"><use href="#i-laptop"/></svg>Home</span>
             <span><svg class="ico"><use href="#i-folder"/></svg>Projects</span>
             <span><svg class="ico"><use href="#i-sync"/></svg>Sync</span>
@@ -163,20 +165,20 @@
             <div class="row"><svg class="ico"><use href="#i-message"/></svg><span class="row-t">Invoice PDF totals</span><small>invoice-api</small><em class="rs done">Synced</em></div>
           </div>
           <div class="grp">
-            <div class="grp-h"><i class="chev"></i><img class="ticon" src="assets/icons/codex.svg" alt="" width="16" height="16">Codex<span class="cnt">2</span><span class="grp-r"><svg class="ico"><use href="#i-out"/></svg><svg class="ico"><use href="#i-plus"/></svg></span></div>
-            <div class="row" data-row="b"><svg class="ico"><use href="#i-message"/></svg><span class="row-t">Coupon codes v2</span><small>shop</small><em class="rs">On OFFICE-PC</em></div>
-            <div class="row"><svg class="ico"><use href="#i-message"/></svg><span class="row-t">Refund email shows old price</span><small>shop</small><em class="rs done">Synced</em></div>
+            <div class="grp-h"><i class="chev"></i><img class="ticon" src="assets/icons/codex.svg" alt="" width="16" height="16">Codex<span class="cnt">1</span><span class="grp-r"><svg class="ico"><use href="#i-out"/></svg><svg class="ico"><use href="#i-plus"/></svg></span></div>
+            <div class="row" data-row="b"><svg class="ico"><use href="#i-message"/></svg><span class="row-t">Coupon codes v2</span><small>shop</small><em class="rs">On DESKTOP</em></div>
           </div>
           <div class="grp">
-            <div class="grp-h"><i class="chev"></i><img class="ticon" src="assets/icons/cursor.svg" alt="" width="16" height="16"><img class="ticon" src="assets/icons/kiro.svg" alt="" width="16" height="16"><img class="ticon" src="assets/icons/antigravity.svg" alt="" width="16" height="16">Cursor, Kiro, Antigravity<span class="cnt">3</span><span class="grp-r"><svg class="ico"><use href="#i-out"/></svg><svg class="ico"><use href="#i-plus"/></svg></span></div>
-            <div class="row"><svg class="ico"><use href="#i-eye"/></svg><span class="row-t">Landing page polish</span><small>portfolio · Cursor</small><em class="rs done">Synced</em></div>
-            <div class="row"><svg class="ico"><use href="#i-eye"/></svg><span class="row-t">Spec: stacking coupons</span><small>shop · Kiro</small><em class="rs done">Synced</em></div>
-            <div class="row"><svg class="ico"><use href="#i-eye"/></svg><span class="row-t">Offline notes sync</span><small>notes-app · Antigravity</small><em class="rs done">Synced</em></div>
+            <div class="grp-h"><i class="chev"></i><img class="ticon" src="assets/icons/cursor.svg" alt="" width="16" height="16">Cursor<span class="cnt">1</span><span class="grp-r"><svg class="ico"><use href="#i-out"/></svg><svg class="ico"><use href="#i-plus"/></svg></span></div>
+            <div class="row" data-row="c"><svg class="ico"><use href="#i-message"/></svg><span class="row-t">Landing page polish</span><small>portfolio</small><em class="rs">Changed</em></div>
           </div>
           <div class="grp">
-            <div class="grp-h"><i class="chev"></i>Summaries<span class="cnt">2</span><span class="grp-r"><svg class="ico"><use href="#i-out"/></svg><svg class="ico"><use href="#i-plus"/></svg></span></div>
-            <div class="row"><svg class="ico"><use href="#i-file"/></svg><span class="row-t">HANDOFF.md</span><small>shop</small><em class="rs">Saved</em></div>
-            <div class="row"><svg class="ico"><use href="#i-file"/></svg><span class="row-t">Previous context in CLAUDE.md</span><small>shop</small><em class="rs">Updated</em></div>
+            <div class="grp-h"><i class="chev"></i><img class="ticon" src="assets/icons/kiro.svg" alt="" width="16" height="16">Kiro<span class="cnt">1</span><span class="grp-r"><svg class="ico"><use href="#i-out"/></svg><svg class="ico"><use href="#i-plus"/></svg></span></div>
+            <div class="row" data-row="d"><svg class="ico"><use href="#i-message"/></svg><span class="row-t">Spec: stacking coupons</span><small>shop · CLI</small><em class="rs">Changed</em></div>
+          </div>
+          <div class="grp">
+            <div class="grp-h"><i class="chev"></i><img class="ticon" src="assets/icons/antigravity.svg" alt="" width="16" height="16">Antigravity<span class="cnt">1</span><span class="grp-r"><svg class="ico"><use href="#i-out"/></svg><svg class="ico"><use href="#i-plus"/></svg></span></div>
+            <div class="row" data-row="e"><svg class="ico"><use href="#i-message"/></svg><span class="row-t">Offline notes sync</span><small>notes-app</small><em class="rs">Changed</em></div>
           </div>
           </div>
         </div>
@@ -187,7 +189,7 @@
             <div class="assist-head"><span class="assist-ico"><svg class="ico"><use href="#i-sync"/></svg></span>Auto-sync<em id="assistState">Working</em></div>
             <div class="assist-log" id="assistLog"></div>
             <div class="assist-now" id="assistNow"></div>
-            <div class="assist-foot"><span class="p">$</span> claude --resume <button class="copy" data-copy="claude --resume" aria-label="Copy command"><svg class="ico"><use href="#i-copy"/></svg></button></div>
+            <div class="assist-foot"><span class="p">$</span> chatrelay status <button class="copy" data-copy="chatrelay status" aria-label="Copy command"><svg class="ico"><use href="#i-copy"/></svg></button></div>
           </div>
         </div>
       </div>
@@ -202,8 +204,9 @@
   <div class="wrap">
     <div class="resume">
       Then open it where you left off:
-      <span class="cmd"><span class="p">$</span> claude --resume <button class="copy" data-copy="claude --resume" aria-label="Copy command"><svg class="ico"><use href="#i-copy"/></svg></button></span>
-      <span class="cmd"><span class="p">$</span> codex resume <button class="copy" data-copy="codex resume" aria-label="Copy command"><svg class="ico"><use href="#i-copy"/></svg></button></span>
+      <span class="cmd"><img class="ticon" src="assets/icons/claude.svg" alt="" width="16" height="16"><span class="p">$</span> claude --resume <button class="copy" data-copy="claude --resume" aria-label="Copy command"><svg class="ico"><use href="#i-copy"/></svg></button></span>
+      <span class="cmd"><img class="ticon" src="assets/icons/codex.svg" alt="" width="16" height="16"><span class="p">$</span> codex resume <button class="copy" data-copy="codex resume" aria-label="Copy command"><svg class="ico"><use href="#i-copy"/></svg></button></span>
+      <span class="cmd open"><img class="ticon" src="assets/icons/cursor.svg" alt="" width="16" height="16"><img class="ticon" src="assets/icons/kiro.svg" alt="" width="16" height="16"><img class="ticon" src="assets/icons/antigravity.svg" alt="" width="16" height="16"> Cursor, Kiro, Antigravity: in ChatRelay</span>
     </div>
   </div>
 
@@ -211,9 +214,9 @@
 <section class="section" id="sync">
   <div class="wrap feature">
     <div class="feature-head reveal">
-      <div class="eyebrow"><svg class="ico"><use href="#i-sync"/></svg> Sync between PCs</div>
-      <h2 class="h2">Start on one PC. <span class="serif">Pick&nbsp;up</span> on the other.</h2>
-      <p class="lead">Every conversation, tool call and changed file goes to storage you own, then to your other PCs. It shows up in the tool's own history list, with every path changed to the new machine. After the first upload, only the new lines travel.</p>
+      <div class="eyebrow"><svg class="ico"><use href="#i-sync"/></svg> Sync between devices</div>
+      <h2 class="h2">Start on one device. <span class="serif">Pick&nbsp;up</span> on the other.</h2>
+      <p class="lead">Every conversation, tool call and changed file goes to storage you own, then to your other devices. Claude Code and Codex chats show up in the tool's own history list, with every path changed to the new machine. Cursor, Kiro and Antigravity chats open in ChatRelay on any device. After the first upload, only the new lines travel.</p>
     </div>
     <div class="panel reveal" data-tabs>
       <div class="panel-tabs" role="tablist">
@@ -227,12 +230,12 @@
             <div class="card-body">
               <div class="machines">
                 <div class="machine">
-                  <div class="machine-top"><svg class="ico"><use href="#i-monitor"/></svg><span class="machine-name">OFFICE-PC</span> Windows</div>
+                  <div class="machine-top"><svg class="ico"><use href="#i-monitor"/></svg><span class="machine-name">DESKTOP</span> Windows</div>
                   <div class="path">C:\Users\me\shop</div>
                 </div>
                 <div class="relay" aria-hidden="true"><span class="flow"><i></i><i></i><i></i><i></i></span></div>
                 <div class="machine">
-                  <div class="machine-top"><svg class="ico"><use href="#i-laptop"/></svg><span class="machine-name">HOME-LAPTOP</span> Windows</div>
+                  <div class="machine-top"><svg class="ico"><use href="#i-laptop"/></svg><span class="machine-name">LAPTOP</span> Windows</div>
                   <div class="path">D:\work\shop</div>
                 </div>
               </div>
@@ -246,28 +249,29 @@
             </div>
           </div>
           <div class="term view" data-panel="cli">
-            <div class="term-bar"><div class="win-dots"><i></i><i></i><i></i></div> claude-sync</div>
-<pre><span class="c"># OFFICE-PC: upload what changed</span>
-<span class="g">$</span> <span class="w">claude-sync push --all</span>
+            <div class="term-bar"><div class="win-dots"><i></i><i></i><i></i></div> chatrelay</div>
+<pre><span class="c"># DESKTOP: upload what changed</span>
+<span class="g">$</span> <span class="w">chatrelay push --all</span>
   shop          <span class="g">↑ 3 sessions</span>  <span class="c">(delta, 41 KB)</span>
   invoice-api   <span class="g">↑ 1 session</span>   <span class="c">(delta, 6 KB)</span>
   <span class="c">secret scan: 1 key found → redacted in the upload</span>
 
-<span class="c"># HOME-LAPTOP: preview first, then write</span>
-<span class="g">$</span> <span class="w">claude-sync pull --dry-run</span>
+<span class="c"># LAPTOP: preview first, then write</span>
+<span class="g">$</span> <span class="w">chatrelay pull --dry-run</span>
   shop  →  D:\work\shop   <span class="c">(matched by git remote)</span>
   <span class="y">×166</span>  C:\Users\me\shop  →  D:\work\shop
   <span class="b">codex</span> 3 threads   <span class="c">(Codex is closed: OK to write)</span>
+  <span class="b">cursor, kiro, antigravity</span> 6 chats  <span class="c">(open in ChatRelay)</span>
   <span class="c">nothing written. run without --dry-run to apply</span></pre>
           </div>
         </div>
         <div class="card">
-          <div class="card-head"><svg class="ico"><use href="#i-check"/></svg> Your second PC in four steps</div>
+          <div class="card-head"><svg class="ico"><use href="#i-check"/></svg> Your second device in four steps</div>
           <div class="card-body" style="padding-top:4px;padding-bottom:4px">
             <ol class="steps-list">
               <li><span class="num">1</span><div><b>Install and pick the same storage.</b> The same synced folder or the same private GitHub repo.</div></li>
               <li><span class="num">2</span><div><b>Get the project folder.</b> For example with <code class="k">git clone</code>. The path may be different.</div></li>
-              <li><span class="num">3</span><div><b>Bring history to this PC.</b> Git projects are matched by their remote. Others you link once.</div></li>
+              <li><span class="num">3</span><div><b>Bring history to this device.</b> Git projects are matched by their remote. Others you link once.</div></li>
               <li><span class="num">4</span><div><b>Check the dry run, then confirm.</b> Turn on auto-sync and it happens by itself from then on.</div></li>
             </ol>
           </div>
@@ -276,9 +280,9 @@
     </div>
     <div class="learn reveal">
       <span>Learn</span>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#setting-up-your-second-pc" target="_blank" rel="noopener">Second PC setup <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#auto-sync" target="_blank" rel="noopener">Auto-sync <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#codex-support-in-detail" target="_blank" rel="noopener">Codex in detail <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/second-device/">Second device setup <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/sync/#auto-sync">Auto-sync <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/supported-tools/">Supported AI tools <svg class="ico"><use href="#i-out"/></svg></a>
     </div>
   </div>
 </section>
@@ -288,8 +292,8 @@
   <div class="wrap feature">
     <div class="feature-head reveal">
       <div class="eyebrow"><svg class="ico"><use href="#i-sparkles"/></svg> Summaries and handoff</div>
-      <h2 class="h2">Start in Codex. <span class="serif">Finish</span> in Claude Code.</h2>
-      <p class="lead">Turn a Codex conversation into a Claude Code one, or the other way round, with the whole history. Or summarize a project's chats from every tool into a <code class="k">HANDOFF.md</code>, and put a short version into <code class="k">CLAUDE.md</code>, <code class="k">AGENTS.md</code> or <code class="k">GEMINI.md</code> so the next tool starts with the context.</p>
+      <h2 class="h2">Start in one tool. <span class="serif">Finish</span> in another.</h2>
+      <p class="lead">Summarize a project's chats from Claude Code, Codex, Cursor, Kiro and Antigravity into one <code class="k">HANDOFF.md</code>, and put a short version into <code class="k">CLAUDE.md</code>, <code class="k">AGENTS.md</code> or <code class="k">GEMINI.md</code> so the next tool starts with the context. A Codex chat can also become a Claude Code one, or the other way round, with the whole history.</p>
     </div>
     <div class="panel reveal" data-tabs>
       <div class="panel-tabs" role="tablist">
@@ -299,7 +303,7 @@
       <div class="panel-inner">
         <div>
           <div class="card view on" data-panel="app">
-            <div class="card-head"><svg class="ico"><use href="#i-file"/></svg> HANDOFF.md <span class="badge">from 3 tools · 41 conversations</span></div>
+            <div class="card-head"><svg class="ico"><use href="#i-file"/></svg> HANDOFF.md <span class="badge">from 5 tools · 41 conversations</span></div>
             <div class="card-body doc">
               <h4>Project overview</h4>
               <p style="margin:0">Online shop: Next.js front end, Stripe checkout, PDF invoices.</p>
@@ -314,9 +318,9 @@
             </div>
           </div>
           <div class="term view" data-panel="cli">
-            <div class="term-bar"><div class="win-dots"><i></i><i></i><i></i></div> claude-sync</div>
-<pre><span class="g">$</span> <span class="w">claude-sync summarize --target claude-md</span>
-  project   shop  <span class="c">(Claude Code 28 · Codex 9 · Cursor 4)</span>
+            <div class="term-bar"><div class="win-dots"><i></i><i></i><i></i></div> chatrelay</div>
+<pre><span class="g">$</span> <span class="w">chatrelay summarize --target claude-md</span>
+  project   shop  <span class="c">(Claude Code 20 · Codex 9 · Cursor 5 · Kiro 3 · Antigravity 4)</span>
   condensed 1.9M → 84k tokens
   <span class="y">hidden</span>    3 secrets · 2 .env values · 1 "never send" word
   model     claude-sonnet-5-5
@@ -324,15 +328,15 @@
     <span class="c">(the rest of the file is untouched)</span>
 
 <span class="c"># any OpenRouter model works too</span>
-<span class="g">$</span> <span class="w">claude-sync summarize --model openrouter:&lt;id&gt; --target handoff</span></pre>
+<span class="g">$</span> <span class="w">chatrelay summarize --model openrouter:&lt;id&gt; --target handoff</span></pre>
           </div>
         </div>
         <div class="card">
           <div class="card-head"><svg class="ico"><use href="#i-swap"/></svg> Continue in…</div>
           <div class="card-body" data-seq=".target" data-seq-class="on">
             <div class="target on"><span class="radio"></span><img class="ticon" src="assets/icons/claude.svg" alt="" width="16" height="16"> Claude Code <code>CLAUDE.md</code></div>
-            <div class="target"><span class="radio"></span><img class="ticon" src="assets/icons/codex.svg" alt="" width="16" height="16"> Codex <code>AGENTS.md</code></div>
-            <div class="target"><span class="radio"></span><span class="tooldot" style="background:#9b9a95"></span> Gemini CLI <code>GEMINI.md</code></div>
+            <div class="target"><span class="radio"></span><img class="ticon" src="assets/icons/codex.svg" alt="" width="16" height="16"><img class="ticon" src="assets/icons/cursor.svg" alt="" width="16" height="16"><img class="ticon" src="assets/icons/kiro.svg" alt="" width="16" height="16"> Codex, Cursor, Kiro <code>AGENTS.md</code></div>
+            <div class="target"><span class="radio"></span><img class="ticon" src="assets/icons/antigravity.svg" alt="" width="16" height="16"> Antigravity, Gemini CLI <code>GEMINI.md</code></div>
             <div class="redact">
               <div style="color:var(--ink);font-weight:500;margin-bottom:4px">Secrets never reach the AI</div>
               <s>sk-ant-api03-•••</s> → <em>[REDACTED:anthropic]</em><br>
@@ -346,9 +350,9 @@
     </div>
     <div class="learn reveal">
       <span>Learn</span>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#summaries-and-continue-in-another-tool" target="_blank" rel="noopener">Summaries <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#continue-a-conversation-in-the-other-tool" target="_blank" rel="noopener">Continue in another tool <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#share-a-conversation" target="_blank" rel="noopener">Share a conversation <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/summaries-and-handoff/">Summaries <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/summaries-and-handoff/#continue-a-conversation-in-the-other-tool">Continue in another tool <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/summaries-and-handoff/#share-a-conversation">Share a conversation <svg class="ico"><use href="#i-out"/></svg></a>
     </div>
   </div>
 </section>
@@ -359,7 +363,7 @@
     <div class="feature-head reveal">
       <div class="eyebrow"><svg class="ico"><use href="#i-chart"/></svg> Search and usage</div>
       <h2 class="h2">Find any prompt. See <span class="serif">where&nbsp;your&nbsp;tokens</span> go.</h2>
-      <p class="lead">Search every prompt and answer in every project and every tool in under a second. Usage shows conversations, messages and tokens per day, the models you used, the hours you work, your streaks and your longest conversations. It is worked out on your PC; nothing is sent.</p>
+      <p class="lead">Search every prompt and answer in every project and every tool in under a second. Usage shows conversations, messages and tokens per day, the models you used, the hours you work, your streaks and your longest conversations. It is worked out on your device; nothing is sent.</p>
     </div>
     <div class="panel reveal" data-tabs>
       <div class="panel-tabs" role="tablist">
@@ -380,14 +384,17 @@
             </div>
           </div>
           <div class="term view" data-panel="cli">
-            <div class="term-bar"><div class="win-dots"><i></i><i></i><i></i></div> claude-sync</div>
-<pre><span class="g">$</span> <span class="w">claude-sync search discount rounding</span>
+            <div class="term-bar"><div class="win-dots"><i></i><i></i><i></i></div> chatrelay</div>
+<pre><span class="g">$</span> <span class="w">chatrelay search discount rounding</span>
   <span class="b">shop</span> · Codex · Fix checkout total rounding
     …the <span class="y">discount</span> is <span class="y">rounded</span> before tax…
   <span class="b">invoice-api</span> · Claude Code · Invoice PDF totals
-  <span class="c">5 matches in 3 conversations (0.2 s)</span>
+  <span class="b">shop</span> · Cursor · Landing page polish
+  <span class="b">shop</span> · Kiro · Spec: stacking coupons
+  <span class="b">notes-app</span> · Antigravity · Offline notes sync
+  <span class="c">7 matches in 5 conversations (0.2 s)</span>
 
-<span class="g">$</span> <span class="w">claude-sync usage --days 90</span>
+<span class="g">$</span> <span class="w">chatrelay usage --days 90</span>
   conversations  612     messages  19,840
   tokens         1.2B    active days  71
   <span class="c">by model, output / input / cache read …</span></pre>
@@ -405,15 +412,15 @@
                 <tr><td><code>claude-haiku-5-5</code></td><td>0.2M</td><td>0.6M</td><td>4M</td></tr>
               </tbody>
             </table>
-            <p style="font-size:12.5px;color:var(--ink-3);margin:12px 0 0">Example numbers. Token counts come from Claude Code and Codex; Antigravity, Cursor and Kiro don't record them. <b style="color:var(--ink-2);font-weight:500">Copy report</b> copies it all as Markdown.</p>
+            <p style="font-size:12.5px;color:var(--ink-3);margin:12px 0 0">Example numbers. Conversations and messages cover every tool. Token counts come from Claude Code and Codex, because Antigravity, Cursor and Kiro don't record them. <b style="color:var(--ink-2);font-weight:500">Copy report</b> copies it all as Markdown.</p>
           </div>
         </div>
       </div>
     </div>
     <div class="learn reveal">
       <span>Learn</span>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#search-every-conversation" target="_blank" rel="noopener">Search <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#usage" target="_blank" rel="noopener">Usage report <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/search-and-usage/#search-every-conversation">Search <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/search-and-usage/#usage">Usage report <svg class="ico"><use href="#i-out"/></svg></a>
     </div>
   </div>
 </section>
@@ -424,7 +431,7 @@
     <div class="feature-head reveal">
       <div class="eyebrow"><svg class="ico"><use href="#i-drive"/></svg> Storage</div>
       <h2 class="h2">Your history stays <span class="serif">where&nbsp;you&nbsp;put&nbsp;it</span>.</h2>
-      <p class="lead">ChatRelay has no server of its own. Pick a folder your PCs can all see, or a private GitHub repository. Only compressed copies go there; your live <code class="k">~/.claude</code> and <code class="k">~/.codex</code> folders never move.</p>
+      <p class="lead">ChatRelay has no server of its own. Pick a folder your devices can all see, or a private GitHub repository. Only compressed copies go there; the history folders of your AI tools never move.</p>
     </div>
     <div class="bento reveal">
       <div class="gh">
@@ -444,14 +451,14 @@
         <div class="store"><span class="store-ico"><img src="assets/icons/dropbox.svg" alt="" width="20" height="20"></span><b>Dropbox</b><span>Any synced Dropbox folder</span></div>
         <div class="store"><span class="store-ico"><svg class="ico"><use href="#i-server"/></svg></span><b>NAS or network share</b><span>Keeps the previous versions of each file</span></div>
         <div class="store"><span class="store-ico"><svg class="ico"><use href="#i-drive"/></svg></span><b>USB drive</b><span>Carry your history in your pocket</span></div>
-        <div class="store"><span class="store-ico"><svg class="ico"><use href="#i-folder"/></svg></span><b>Any folder</b><span>If your PCs can see it, it works</span></div>
+        <div class="store"><span class="store-ico"><svg class="ico"><use href="#i-folder"/></svg></span><b>Any folder</b><span>If your devices can see it, it works</span></div>
       </div>
     </div>
     <div class="learn reveal">
       <span>Learn</span>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#choosing-where-your-history-is-stored-backend" target="_blank" rel="noopener">Choosing a backend <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#storage-layout-in-the-folder-or-repo" target="_blank" rel="noopener">Storage layout <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#web-and-phone-viewer" target="_blank" rel="noopener">Web and phone viewer <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/storage/">Choosing a backend <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/how-it-works/#storage-layout-in-the-folder-or-repo">Storage layout <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/web-and-phone/">Web and phone viewer <svg class="ico"><use href="#i-out"/></svg></a>
     </div>
   </div>
 </section>
@@ -462,7 +469,7 @@
     <div class="feature-head reveal">
       <div class="eyebrow"><svg class="ico"><use href="#i-terminal"/></svg> Command line</div>
       <h2 class="h2">Everything in the app, <span class="serif">from&nbsp;the&nbsp;terminal</span>.</h2>
-      <p class="lead">The installer puts <code class="k">claude-sync.exe</code> next to the app. It is what the Claude Code hooks run on session start and end, and it never fails a session. Use it in scripts, with <code class="k">--json</code> for machine-readable output.</p>
+      <p class="lead">The installer puts <code class="k">chatrelay.exe</code> next to the app. It works with every tool, runs the auto-sync hooks, and never fails a session. Use it in scripts, with <code class="k">--json</code> for machine-readable output.</p>
     </div>
     <div class="term reveal" data-tabs data-auto>
       <div class="term-bar">
@@ -475,41 +482,44 @@
           <button class="tab" role="tab" aria-selected="false" data-tab="backups">backups</button>
         </div>
       </div>
-<pre class="view on" data-panel="status"><span class="g">$</span> <span class="w">claude-sync status</span>
-  machine          HOME-LAPTOP
+<pre class="view on" data-panel="status"><span class="g">$</span> <span class="w">chatrelay status</span>
+  machine          LAPTOP
   backend          github · me/ai-history  <span class="g">(encrypted)</span>
   last sync        2 minutes ago  <span class="g">✓</span>
   hooks            SessionStart → pull · SessionEnd → push
   queue            empty
   cleanupPeriodDays 3650</pre>
-<pre class="view" data-panel="push"><span class="g">$</span> <span class="w">claude-sync push --cwd D:\work\shop --redact</span>
+<pre class="view" data-panel="push"><span class="g">$</span> <span class="w">chatrelay push --cwd D:\work\shop --redact</span>
   shop  <span class="c">(git:github.com/me/shop)</span>
   <span class="g">↑</span> 2 Claude Code sessions   delta · 18 KB
   <span class="g">↑</span> 1 Codex thread           delta · 7 KB
+  <span class="g">↑</span> 1 Cursor chat            1 KB
+  <span class="g">↑</span> 1 Kiro CLI chat          2 KB
+  <span class="g">↑</span> 1 Antigravity chat       4 KB
   <span class="y">!</span> 1 secret redacted in the uploaded copy  <span class="c">(github token)</span>
   <span class="g">✓</span> 1 commit to me/ai-history</pre>
-<pre class="view" data-panel="providers"><span class="g">$</span> <span class="w">claude-sync providers</span>
+<pre class="view" data-panel="providers"><span class="g">$</span> <span class="w">chatrelay providers</span>
   claude-code   2.1.x        format ok     restore <span class="g">on</span>
   codex         0.160        state_5 / 58  restore <span class="g">on</span>
-  antigravity   installed    read-only     restore <span class="c">n/a</span>
-  cursor        installed    read-only     restore <span class="c">n/a</span>
-  kiro          installed    read-only     restore <span class="c">n/a</span></pre>
-<pre class="view" data-panel="hooks"><span class="g">$</span> <span class="w">claude-sync hooks install</span>
-  <span class="c">backup  ~/.claude-sync/backups/…-settings</span>
-  <span class="g">+</span> SessionStart  claude-sync pull --hook --quiet
-  <span class="g">+</span> SessionEnd    claude-sync push --hook --quiet
+  antigravity   2.6.0        IDE + CLI     view, search, sync
+  cursor        3.28.7       editor + CLI  view, search, sync
+  kiro          1.4.86       editor + CLI  view, search, sync</pre>
+<pre class="view" data-panel="hooks"><span class="g">$</span> <span class="w">chatrelay hooks install</span>
+  <span class="c">backup  ~/.chatrelay/backups/…-settings</span>
+  <span class="g">+</span> SessionStart  chatrelay pull --hook --quiet
+  <span class="g">+</span> SessionEnd    chatrelay push --hook --quiet
   <span class="g">✓</span> your other settings and hooks are kept</pre>
-<pre class="view" data-panel="backups"><span class="g">$</span> <span class="w">claude-sync backups</span>
+<pre class="view" data-panel="backups"><span class="g">$</span> <span class="w">chatrelay backups</span>
   20261105-104211-pull-shop        14 files
   20261104-181502-settings          1 file
-<span class="g">$</span> <span class="w">claude-sync backups restore 20261105-104211-pull-shop</span>
+<span class="g">$</span> <span class="w">chatrelay backups restore 20261105-104211-pull-shop</span>
   <span class="g">✓</span> 14 files put back exactly as they were</pre>
     </div>
     <div class="learn reveal">
       <span>Learn</span>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#command-line-tool-cli" target="_blank" rel="noopener">CLI reference <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#auto-sync-hooks-claude-code" target="_blank" rel="noopener">Auto-sync hooks <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#adding-another-ai-tool-adapter-guide" target="_blank" rel="noopener">Adapter guide <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/cli/">CLI reference <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/how-it-works/#auto-sync-hooks-claude-code">Auto-sync hooks <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/adapter-guide/">Adapter guide <svg class="ico"><use href="#i-out"/></svg></a>
     </div>
   </div>
 </section>
@@ -520,7 +530,7 @@
     <div class="feature-head reveal">
       <div class="eyebrow"><svg class="ico"><use href="#i-shield"/></svg> Safety and privacy</div>
       <h2 class="h2">We worry about <span class="serif">your&nbsp;history</span>, so you don't have to.</h2>
-      <p class="lead">Your originals are never changed on upload. Every write is backed up first and shown as a dry run. If a conversation changed on both PCs, you keep both. If ChatRelay sees a tool format it doesn't know, it turns writing off instead of guessing.</p>
+      <p class="lead">Your originals are never changed on upload. Every write is backed up first and shown as a dry run. If a conversation changed on both devices, you keep both. If ChatRelay sees a tool format it doesn't know, it turns writing off instead of guessing.</p>
     </div>
     <div class="card health reveal" id="health">
       <div class="health-top">
@@ -554,9 +564,9 @@
     </div>
     <div class="learn reveal">
       <span>Learn</span>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#safety-and-privacy" target="_blank" rel="noopener">Safety and privacy <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#files-chatrelay-reads-and-writes" target="_blank" rel="noopener">Files it reads and writes <svg class="ico"><use href="#i-out"/></svg></a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#backups" target="_blank" rel="noopener">Backups <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/security/">Safety and privacy <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/files/">Files it reads and writes <svg class="ico"><use href="#i-out"/></svg></a>
+      <a href="docs/sync/#backups">Backups <svg class="ico"><use href="#i-out"/></svg></a>
     </div>
   </div>
 </section>
@@ -567,21 +577,21 @@
     <div class="feature-head reveal" style="margin-bottom:36px">
       <div class="eyebrow"><svg class="ico"><use href="#i-plug"/></svg> Supported AI tools</div>
       <h2 class="h2">One history for <span class="serif">all&nbsp;your&nbsp;tools</span>.</h2>
-      <p class="lead">Each tool is an adapter that checks the format it finds on your PC. Unknown versions are still shown, but writing is turned off with a clear reason.</p>
+      <p class="lead">Each tool is an adapter that checks the format it finds on your device. Unknown versions are still shown, but writing is turned off with a clear reason.</p>
     </div>
     <div class="table-wrap reveal">
       <table class="tools">
-        <thead><tr><th>Tool</th><th>View and search</th><th>Sync between PCs</th><th>Summarize</th><th>Open your chats in</th><th>Context file</th></tr></thead>
+        <thead><tr><th>Tool</th><th>View and search</th><th>Sync between devices</th><th>Summarize</th><th>Open your chats in</th><th>Context file</th></tr></thead>
         <tbody>
           <tr><td><div class="tname"><img class="ticon" src="assets/icons/claude.svg" alt="" width="20" height="20">Claude Code</div><small>Terminal CLI, VS Code extension</small></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span> automatic, on session start and end</td><td><span class="yes">✓</span></td><td><code class="k">claude --resume</code>, VS Code history</td><td><code class="k">CLAUDE.md</code></td></tr>
           <tr><td><div class="tname"><img class="ticon" src="assets/icons/codex.svg" alt="" width="20" height="20">OpenAI Codex</div><small>CLI, VS Code extension, desktop app</small></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span> automatic, a minute after a chat goes quiet</td><td><span class="yes">✓</span></td><td><code class="k">codex resume</code>, Codex sidebar</td><td><code class="k">AGENTS.md</code></td></tr>
           <tr><td><div class="tname"><img class="ticon" src="assets/icons/antigravity.svg" alt="" width="20" height="20">Antigravity</div><small>Antigravity IDE, Antigravity CLI</small></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span> to every device</td><td><span class="yes">✓</span></td><td>ChatRelay on desktop, web and phone</td><td><code class="k">GEMINI.md</code></td></tr>
-          <tr><td><div class="tname"><img class="ticon" src="assets/icons/cursor.svg" alt="" width="20" height="20">Cursor</div><small>Cursor editor (Agent chat)</small></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span> to every device</td><td><span class="yes">✓</span></td><td>ChatRelay on desktop, web and phone</td><td><code class="k">AGENTS.md</code></td></tr>
-          <tr><td><div class="tname"><img class="ticon" src="assets/icons/kiro.svg" alt="" width="20" height="20">Kiro</div><small>Kiro editor (agent chat)</small></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span> to every device</td><td><span class="yes">✓</span></td><td>ChatRelay on desktop, web and phone</td><td><code class="k">AGENTS.md</code></td></tr>
+          <tr><td><div class="tname"><img class="ticon" src="assets/icons/cursor.svg" alt="" width="20" height="20">Cursor</div><small>Cursor editor (Agent chat), Cursor CLI</small></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span> to every device</td><td><span class="yes">✓</span></td><td>ChatRelay on desktop, web and phone</td><td><code class="k">AGENTS.md</code></td></tr>
+          <tr><td><div class="tname"><img class="ticon" src="assets/icons/kiro.svg" alt="" width="20" height="20">Kiro</div><small>Kiro editor (agent chat), Kiro CLI</small></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span> to every device</td><td><span class="yes">✓</span></td><td>ChatRelay on desktop, web and phone</td><td><code class="k">AGENTS.md</code></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="table-note reveal">Verified with Claude Code 2.1.x and Codex 0.144 to 0.160. Summaries can also be written for Gemini CLI as <code class="k">GEMINI.md</code>.</p>
+    <p class="table-note reveal">Verified with Claude Code 2.1, Codex 0.160, Antigravity 2.6, Cursor 3.28 with its CLI, and Kiro 1.4 with Kiro CLI 3.1. Summaries can also be written for Gemini CLI as <code class="k">GEMINI.md</code>.</p>
   </div>
 </section>
 
@@ -592,16 +602,16 @@
       <div class="stat reveal">
         <div class="stat-v">KB<small>not MB</small></div>
         <p>After the first upload, only the new lines of a conversation travel: a few KB instead of the whole file.</p>
-        <a href="https://github.com/Abh1shxkk/claude-sync-releases#push" target="_blank" rel="noopener">How push works <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a href="docs/how-it-works/#push">How push works <svg class="ico"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="stat reveal">
         <div class="stat-v">&lt;1<small>second</small></div>
         <p>to search about 2 GB of history: every prompt and answer, in every project and every tool.</p>
-        <a href="https://github.com/Abh1shxkk/claude-sync-releases#search-every-conversation" target="_blank" rel="noopener">How search works <svg class="ico"><use href="#i-arrow"/></svg></a>
+        <a href="docs/search-and-usage/#search-every-conversation">How search works <svg class="ico"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="stat reveal">
         <div class="stat-v">0<small>servers</small></div>
-        <p>Your chats go between your PCs and your own folder or private repo. Nobody else holds them.</p>
+        <p>Your chats go between your devices and your own folder or private repo. Nobody else holds them.</p>
         <a href="#security">Safety and privacy <svg class="ico"><use href="#i-arrow"/></svg></a>
       </div>
     </div>
@@ -616,9 +626,9 @@
       <h2 class="h2">Set up once, <span class="serif">in&nbsp;a&nbsp;few&nbsp;minutes</span>.</h2>
     </div>
     <div class="howto">
-      <div class="how reveal"><div class="how-n">01</div><h3>Install</h3><p>Run the installer. A setup wizard finds your Claude Code and Codex history and shows how many conversations each tool has.</p></div>
-      <div class="how reveal"><div class="how-n">02</div><h3>Choose storage</h3><p>A synced folder or a private GitHub repo. Name the machine, raise Claude Code's 30-day deletion, turn on auto-sync.</p></div>
-      <div class="how reveal"><div class="how-n">03</div><h3>Add your other PC</h3><p>Install, choose the same storage and bring history in. From then on it syncs by itself when sessions start and end.</p></div>
+      <div class="how reveal"><div class="how-n">01</div><h3>Install</h3><p>Run the installer. A setup wizard finds the history of your AI tools and shows how many conversations each one has.</p></div>
+      <div class="how reveal"><div class="how-n">02</div><h3>Choose storage</h3><p>A synced folder or a private GitHub repo. Name the machine and turn on auto-sync.</p></div>
+      <div class="how reveal"><div class="how-n">03</div><h3>Add your other device</h3><p>Install, choose the same storage and bring history in. From then on it syncs by itself when sessions start and end.</p></div>
     </div>
   </div>
 </section>
@@ -637,28 +647,28 @@
         <h3>Windows</h3>
         <p>The full app: sync, auto-sync, search, usage, summaries and the CLI. Lives in the system tray.</p>
         <code>ChatRelay_x64-setup.exe</code>
-        <a class="btn btn-dark" href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener"><svg class="ico"><use href="#i-download"/></svg> Download</a>
+        <a class="btn btn-dark" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener"><svg class="ico"><use href="#i-download"/></svg> Download</a>
       </div>
       <div class="plat reveal">
         <div class="plat-ico"><svg class="ico"><use href="#i-phone"/></svg></div>
         <h3>Android</h3>
         <p>Read every conversation from your GitHub storage on your phone. A read-only viewer.</p>
         <code>ChatRelay.apk</code>
-        <a class="btn btn-light" href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener"><svg class="ico"><use href="#i-download"/></svg> Get the APK</a>
+        <a class="btn btn-light" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener"><svg class="ico"><use href="#i-download"/></svg> Get the APK</a>
       </div>
       <div class="plat reveal">
         <div class="plat-ico"><svg class="ico"><use href="#i-globe"/></svg></div>
         <h3>Web viewer</h3>
         <p>The same Rust engine in WebAssembly. Talks only to api.github.com and loads no third-party scripts.</p>
-        <code>abh1shxkk.github.io/claude-sync-web</code>
-        <a class="btn btn-light" href="https://abh1shxkk.github.io/claude-sync-web/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-out"/></svg> Open</a>
+        <code>abh1shxkk.github.io/chatrelay-web</code>
+        <a class="btn btn-light" href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener"><svg class="ico"><use href="#i-out"/></svg> Open</a>
       </div>
       <div class="plat reveal">
         <div class="plat-ico"><svg class="ico"><use href="#i-laptop"/></svg></div>
         <h3>macOS and Linux <span class="badge">beta</span></h3>
         <p>Built by GitHub Actions as <code>.dmg</code>, <code>.AppImage</code> and <code>.deb</code>. Not code-signed and lightly tested.</p>
         <code>.github/workflows/desktop-mac-linux.yml</code>
-        <a class="btn btn-light" href="https://github.com/Abh1shxkk/claude-sync-releases/releases" target="_blank" rel="noopener"><svg class="ico"><use href="#i-out"/></svg> All releases</a>
+        <a class="btn btn-light" href="https://github.com/Abh1shxkk/chatrelay-releases/releases" target="_blank" rel="noopener"><svg class="ico"><use href="#i-out"/></svg> All releases</a>
       </div>
     </div>
     <p class="table-note reveal">The Windows installer isn't code-signed yet. If SmartScreen says "Windows protected your PC", click <b style="color:var(--ink-2)">More info → Run anyway</b>.</p>
@@ -671,16 +681,20 @@
     <div class="reveal">
       <div class="eyebrow"><svg class="ico"><use href="#i-message"/></svg> FAQ</div>
       <h2 class="h2">Questions, <span class="serif">answered</span>.</h2>
-      <p class="lead" style="font-size:16px">Something else? Check the <a href="https://github.com/Abh1shxkk/claude-sync-releases#troubleshooting-and-faq" target="_blank" rel="noopener">troubleshooting guide</a> or <a href="mailto:abhichauhan200504@gmail.com">send an email</a>.</p>
+      <p class="lead" style="font-size:16px">Something else? Check the <a href="docs/troubleshooting/">troubleshooting guide</a> or <a href="mailto:abhichauhan200504@gmail.com">send an email</a>.</p>
     </div>
     <div class="faq-list reveal">
       <details open>
-        <summary>Can syncing log me out of Claude Code or Codex?<svg class="ico"><use href="#i-plus"/></svg></summary>
-        <p>No. ChatRelay never reads, copies or changes login files such as <code class="k">~/.claude/.credentials.json</code> or <code class="k">~/.codex/auth.json</code>. If you get logged out, it comes from the tool itself.</p>
+        <summary>Which AI tools does it work with?<svg class="ico"><use href="#i-plus"/></svg></summary>
+        <p>Claude Code, Codex, Cursor, Kiro and Antigravity, in the editor and in the terminal. Every chat can be viewed, searched, summarized and synced. Claude Code and Codex chats can also be restored into the tool on your other device; Cursor, Kiro and Antigravity chats open in ChatRelay on desktop, web and phone.</p>
       </details>
       <details>
-        <summary>What if I continued the same chat on both PCs?<svg class="ico"><use href="#i-plus"/></svg></summary>
-        <p>Nothing is overwritten. Your copy stays as it is and the other version is saved as a new conversation, for example "… (from OFFICE-PC)". Both then appear in the tool and sync to your other PCs.</p>
+        <summary>Can syncing log me out of my AI tools?<svg class="ico"><use href="#i-plus"/></svg></summary>
+        <p>No. ChatRelay only works with your chat history. It never reads, copies or changes the login files of Claude Code, Codex, Cursor, Kiro or Antigravity. If you get logged out, it comes from the tool itself.</p>
+      </details>
+      <details>
+        <summary>What if I continued the same chat on both devices?<svg class="ico"><use href="#i-plus"/></svg></summary>
+        <p>Nothing is overwritten. Your copy stays as it is and the other version is saved as a new conversation, for example "… (from DESKTOP)". Both then appear in the tool and sync to your other devices.</p>
       </details>
       <details>
         <summary>My old Claude Code conversations disappeared.<svg class="ico"><use href="#i-plus"/></svg></summary>
@@ -696,7 +710,7 @@
       </details>
       <details>
         <summary>Was this called Claude Sync?<svg class="ico"><use href="#i-plus"/></svg></summary>
-        <p>Yes. It was renamed in v0.5.1 because it now handles more than one AI tool. Existing installs update in place, and the <code class="k">claude-sync</code> CLI and the <code class="k">~/.claude-sync</code> folder keep their names.</p>
+        <p>Yes. It was renamed because it now handles more than one AI tool, and every name moved with it: the app, the <code class="k">chatrelay</code> command and the <code class="k">~/.chatrelay</code> folder. Coming from Claude Sync? The README has <a href="docs/about-the-rename/">six short steps</a>.</p>
       </details>
     </div>
   </div>
@@ -710,40 +724,40 @@
     <div class="foot-cta">
       <div>
         <h2>Start syncing your AI chats today</h2>
-        <p>Claude Code, Codex and more, on every PC. Free and open source.</p>
+        <p>All your AI coding tools, on every device. Free and open source.</p>
       </div>
       <div class="foot-btns">
-        <a class="pill pill-cream" href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener">Download for Windows</a>
-        <a class="pill pill-line" href="https://github.com/Abh1shxkk/claude-sync-releases" target="_blank" rel="noopener">View on GitHub</a>
+        <a class="pill pill-cream" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Download for Windows</a>
+        <a class="pill pill-line" href="https://github.com/Abh1shxkk/chatrelay-releases" target="_blank" rel="noopener">View on GitHub</a>
       </div>
     </div>
     <div class="footer-top">
       <div>
         <h4>Product</h4>
         <ul>
-          <li><a href="#sync">Sync between PCs</a></li>
-          <li><a href="#handoff">Summaries and handoff</a></li>
-          <li><a href="#usage">Search and usage</a></li>
-          <li><a href="#security">Security</a></li>
+          <li><a href="docs/sync/">Sync between devices</a></li>
+          <li><a href="docs/summaries-and-handoff/">Summaries and handoff</a></li>
+          <li><a href="docs/search-and-usage/">Search and usage</a></li>
+          <li><a href="docs/security/">Security</a></li>
         </ul>
       </div>
       <div>
         <h4>Download</h4>
         <ul>
-          <li><a href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener">Windows</a></li>
-          <li><a href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener">Android app</a></li>
-          <li><a href="https://abh1shxkk.github.io/claude-sync-web/" target="_blank" rel="noopener">Web viewer</a></li>
-          <li><a href="https://github.com/Abh1shxkk/claude-sync-releases/releases" target="_blank" rel="noopener">All releases</a></li>
+          <li><a href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Windows</a></li>
+          <li><a href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Android app</a></li>
+          <li><a href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">Web viewer</a></li>
+          <li><a href="docs/changelog/">All releases</a></li>
         </ul>
       </div>
       <div>
         <h4>Docs</h4>
         <ul>
-          <li><a href="https://github.com/Abh1shxkk/claude-sync-releases#first-time-setup" target="_blank" rel="noopener">First-time setup</a></li>
-          <li><a href="https://github.com/Abh1shxkk/claude-sync-releases#command-line-tool-cli" target="_blank" rel="noopener">CLI reference</a></li>
-          <li><a href="https://github.com/Abh1shxkk/claude-sync-releases#troubleshooting-and-faq" target="_blank" rel="noopener">Troubleshooting</a></li>
-          <li><a href="https://github.com/Abh1shxkk/claude-sync-releases#building-from-source-and-development" target="_blank" rel="noopener">Build from source</a></li>
-          <li><a href="https://github.com/Abh1shxkk/claude-sync-releases#adding-another-ai-tool-adapter-guide" target="_blank" rel="noopener">Adapter guide</a></li>
+          <li><a href="docs/first-time-setup/">First-time setup</a></li>
+          <li><a href="docs/cli/">CLI reference</a></li>
+          <li><a href="docs/troubleshooting/">Troubleshooting</a></li>
+          <li><a href="docs/build-from-source/">Build from source</a></li>
+          <li><a href="docs/adapter-guide/">Adapter guide</a></li>
         </ul>
       </div>
       <div>
@@ -759,9 +773,9 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Abhishek Chauhan</span>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases/blob/main/LICENSE" target="_blank" rel="noopener">MIT license</a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#safety-and-privacy" target="_blank" rel="noopener">Privacy</a>
-      <a href="https://github.com/Abh1shxkk/claude-sync-releases#about-the-rename" target="_blank" rel="noopener">About the rename</a>
+      <a href="docs/license/">MIT license</a>
+      <a href="docs/security/">Privacy</a>
+      <a href="docs/about-the-rename/">About the rename</a>
       <span class="live"><span class="dot ok"></span> Free and open source</span>
     </div>
   </div>
@@ -773,7 +787,7 @@
 <aside class="float" id="float" aria-label="Download ChatRelay">
   <button class="float-x" id="floatX" aria-label="Close">×</button>
   <div class="float-main"><svg class="ico"><use href="#i-download"/></svg><div class="float-t">Get ChatRelay</div></div>
-  <a class="float-a" href="https://github.com/Abh1shxkk/claude-sync-releases/releases/latest" target="_blank" rel="noopener">Download <svg class="ico"><use href="#i-out"/></svg></a>
+  <a class="float-a" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Download <svg class="ico"><use href="#i-out"/></svg></a>
 </aside>
 
 <script src="assets/app.js" defer></script>

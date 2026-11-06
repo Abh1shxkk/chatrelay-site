@@ -894,6 +894,11 @@ code.k { font-size: .86em; background: var(--soft); border: 1px solid var(--line
   .row small { display: none; }
   .row { padding-left: 16px; }
 }
+.resume .cmd { gap: 7px; }
+.resume .cmd.open { padding-right: 12px; font-family: var(--sans); font-size: 13.5px; }
+.resume .ticon + .ticon { margin-left: -3px; }
+.target .ticon + .ticon { margin-left: -3px; }
+
 @media (prefers-reduced-motion: reduce) {
   .ln, .health-dot { opacity: 1; }
   .health-chart { clip-path: none; }
@@ -909,16 +914,16 @@ code.k { font-size: .86em; background: var(--soft); border: 1px solid var(--line
 /* =====================================================================
    Palettes. Four stripes from lightest (--y) to darkest (--m, also the footer).
    --ro is the accent used for carets, highlights and the chart.
-   Preview another one with ?palette=forest|plum|mono|sunset
+   Preview another one with ?palette=forest|plum|mono|ocean
    ===================================================================== */
 :root {
-  --y: #9ad8ff; --o: #4da6ff; --ro: #2f6bff; --m: #101a4d;
-  --ro-rgb: 47, 107, 255; --tint: #ebf1ff; --cream: #eef3ff;
+  --y: #ffb224; --o: #ff8a1f; --ro: #ff4f00; --m: #7d1b0c;
+  --ro-rgb: 255, 79, 0; --tint: #fff1e6; --cream: #fdf0e6;
 }
 :root[data-palette="forest"] { --y: #c9f08f; --o: #6fd08c; --ro: #1b9a68; --m: #0d3a2d; --ro-rgb: 27, 154, 104; --tint: #e7f6ee; --cream: #eefaf2; }
 :root[data-palette="plum"] { --y: #f9b7dc; --o: #d583f2; --ro: #8447ff; --m: #2a1250; --ro-rgb: 132, 71, 255; --tint: #f2ebff; --cream: #f6efff; }
 :root[data-palette="mono"] { --y: #dcdbd7; --o: #a3a29d; --ro: #4a4944; --m: #141412; --ro-rgb: 74, 73, 68; --tint: #f1f0ef; --cream: #f4f3f1; }
-:root[data-palette="sunset"] { --y: #ffb224; --o: #ff8a1f; --ro: #ff4f00; --m: #7d1b0c; --ro-rgb: 255, 79, 0; --tint: #fff1e6; --cream: #fdf0e6; }
+:root[data-palette="ocean"] { --y: #9ad8ff; --o: #4da6ff; --ro: #2f6bff; --m: #101a4d; --ro-rgb: 47, 107, 255; --tint: #ebf1ff; --cream: #eef3ff; }
 .health-chart { color: var(--ro); }
 .footer { padding-bottom: 44px; }
 
@@ -1002,3 +1007,9 @@ code.k { font-size: .86em; background: var(--soft); border: 1px solid var(--line
 .gh { min-width: 0; }
 .gh-log { grid-template-columns: minmax(0, 1fr); }
 .gh-log span { min-width: 0; }
+
+/* Auto-sync window on the right, so it never covers the tool groups */
+@media (min-width: 901px) {
+  .assist { left: auto; right: 24px; bottom: 24px; }
+  .fmain { margin-right: 346px; }
+}

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sync between devices | ChatRelay docs</title>
+  <meta name="description" content="Upload, download and keep everything in step.">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/docs.css">
+  <script>try{var t=localStorage.getItem('chatrelay-docs-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch(e){}</script>
+</head>
+<body class="docs" data-root="../../" data-title="Sync between devices">
+<div class="d-progress" aria-hidden="true"><i id="dProgress"></i></div>
+<div class="r1"><div class="r2"><div class="r3"><div class="r4">
+<div class="sheet d-sheet">
+<header class="d-head">
+  <div class="d-top">
+    <button class="d-menu" id="dMenu" aria-label="Open menu" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+    <a class="brand" href="../../"><img src="../../assets/icon.png" alt="" width="26" height="26"> ChatRelay <span class="d-brand-sub">Docs</span></a>
+    <button class="d-search" id="dSearch"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span>Search the docs…</span><kbd>Ctrl</kbd><kbd>K</kbd></button>
+    <nav class="d-links" aria-label="Site"><a href="https://github.com/Abh1shxkk/chatrelay-releases" target="_blank" rel="noopener">GitHub</a><a href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">Web viewer</a><a class="d-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Download</a></nav>
+  </div>
+  <nav class="d-tabs" aria-label="Sections"><a href="../overview/">Get started</a><a href="../sync/" class="on" aria-current="true">Using ChatRelay</a><a href="../supported-tools/">Reference</a><a href="../security/">Security</a><a href="../troubleshooting/">Help</a><a href="../build-from-source/">Developers</a><a href="../changelog/">Changelog</a></nav>
+</header>
+<div class="d-layout">
+  <aside class="d-side" id="dSide" aria-label="Using ChatRelay"><p class="d-side-t">Using ChatRelay</p><a href="../sync/" class="on" aria-current="page">Sync between devices</a><a href="../views/">The app</a><a href="../summaries-and-handoff/">Summaries and handoff</a><a href="../search-and-usage/">Search and usage</a><a href="../web-and-phone/">Web and phone viewer</a><a href="../updates/">Updates</a></aside>
+  <main class="d-main">
+    <div class="d-crumbs"><a href="../sync/">Using ChatRelay</a><span>›</span><span>Sync between devices</span>
+      <div class="d-copy" id="dCopy">
+        <button class="d-copy-main" id="dCopyPage"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span>Copy</span></button><button class="d-copy-more" id="dCopyMore" aria-label="More options" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="d-pop" id="dPop" hidden>
+          <button data-act="copy"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span><b>Copy page</b><small>Copy this page as Markdown</small></span></button>
+          <a href="index.md" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M9 13h6"/><path d="M9 17h6"/></svg><span><b>View as Markdown</b><small>Open this page as plain text</small></span></a>
+          <hr>
+          <button data-act="chatgpt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span><b>Open in ChatGPT</b><small>Ask ChatGPT about this page</small></span></button>
+          <button data-act="claude"><img src="../../assets/icons/claude.svg" alt="" width="18" height="18"><span><b>Open in Claude</b><small>Ask Claude about this page</small></span></button>
+          <hr>
+          <button data-act="pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg><span><b>Export as PDF</b><small>Print or save this page</small></span></button>
+        </div>
+      </div>
+    </div>
+    <article class="d-doc">
+      <h1>Sync between devices</h1>
+      <p class="d-lead">Upload, download and keep everything in step.</p>
+      <h2 id="push-and-pull"><a class="h-link" href="#push-and-pull" aria-label="Link to this section">#</a>Push and pull</h2>
+<ul>
+<li><strong>Push</strong> uploads the conversations of a project that changed since the last sync. <strong>Push all</strong> does every project.</li>
+<li><strong>Pull</strong> downloads what&#39;s new. It always starts with a <strong>dry run</strong> that lists every file it would write and every path rewrite. Nothing is written until you confirm.</li>
+</ul>
+<h2 id="auto-sync"><a class="h-link" href="#auto-sync" aria-label="Link to this section">#</a>Auto-sync</h2>
+<p>When <strong>Auto-sync</strong> is on:</p>
+<ul>
+<li><strong>Claude Code</strong>: hooks in <code>~/.claude/settings.json</code> run ChatRelay when a Claude Code session <strong>starts</strong> (pull) and <strong>ends</strong> (push).</li>
+<li><strong>Codex</strong>: Codex has no such hook. The desktop app watches Codex&#39;s sessions and uploads a changed conversation about a minute after it goes quiet. Every 15 minutes (starting 20 seconds after launch) it also downloads new ones (skipped while Codex is running).</li>
+<li>Uploads that failed because you were offline are queued and retried.</li>
+</ul>
+<p>You can turn auto-sync on or off in Settings, in the tray menu, or with <code>chatrelay hooks install|uninstall</code>.</p>
+<h2 id="status-dots"><a class="h-link" href="#status-dots" aria-label="Link to this section">#</a>Status dots</h2>
+<div class="table"><table><thead><tr><th>Dot</th><th>Meaning</th><th>What to do</th></tr></thead><tbody><tr><td>Green</td><td>Synced</td><td>Nothing</td></tr><tr><td>Yellow / orange</td><td>Changes on this PC not uploaded yet</td><td>Push, or wait for auto-sync</td></tr><tr><td>Red</td><td>Last sync failed</td><td>Open <strong>Logs</strong> for the reason</td></tr><tr><td>Grey</td><td>Never synced</td><td>Push it once</td></tr><tr><td>Hollow circle</td><td>No project identity yet (not linked)</td><td>Push it (a link is created) or <strong>Link</strong> it to the project from the other PC</td></tr><tr><td>Crossed-out circle</td><td>Sync is off for this project on this PC</td><td><strong>Turn sync on</strong> on the project&#39;s page, if you want it synced again</td></tr></tbody></table></div>
+<h2 id="keep-a-project-on-this-pc-only"><a class="h-link" href="#keep-a-project-on-this-pc-only" aria-label="Link to this section">#</a>Keep a project on this PC only</h2>
+<p>Some projects should never leave a PC, for example client work that must stay on one machine. On the project&#39;s page click <strong>Don&#39;t sync</strong> (or hover a project in the Simple view and click <strong>don&#39;t sync</strong>). From then on nothing from that project is uploaded, and it is not downloaded automatically (auto-sync hooks, background sync, &quot;Upload everything&quot;). A manual <strong>Pull</strong> still works. The project shows a crossed-out status dot and &quot;sync off on this PC&quot;; <strong>Turn sync on</strong> undoes it. From the command line: <code>chatrelay exclude &lt;dir&gt;</code> (<code>--remove</code> to undo, no folder to list them).</p>
+<h2 id="backups"><a class="h-link" href="#backups" aria-label="Link to this section">#</a>Backups</h2>
+<p>Every write is preceded by a backup in <code>~/.chatrelay/backups/&lt;timestamp&gt;-&lt;what&gt;/</code>. Open <strong>Backups</strong> (or <code>chatrelay backups</code>) to see them, and <strong>Restore</strong> one to put every file back exactly as it was. A restore also removes files that the change had created.</p>
+<h2 id="logs"><a class="h-link" href="#logs" aria-label="Link to this section">#</a>Logs</h2>
+<p><strong>Logs</strong> shows everything ChatRelay did, with errors highlighted, and a button that copies an error report.</p>
+<h2 id="tray-menu"><a class="h-link" href="#tray-menu" aria-label="Link to this section">#</a>Tray menu</h2>
+<p>Push now · Pull now · Auto-sync on/off · Last sync status · Open · Quit.</p>
+
+    </article>
+    <nav class="d-pager" aria-label="Previous and next page">
+      <a class="pv" href="../second-device/"><span class="d-arrow"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span><span class="d-pg"><small>Previous</small><b>Set up your second device</b></span></a>
+      <a class="nx" href="../views/"><span class="d-pg"><small>Next</small><b>The app</b></span><span class="d-arrow"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+    </nav>
+  </main>
+  <aside class="d-toc" aria-label="On this page"><p class="d-side-t">On this page</p><a href="#push-and-pull" class="d2">Push and pull</a><a href="#auto-sync" class="d2">Auto-sync</a><a href="#status-dots" class="d2">Status dots</a><a href="#keep-a-project-on-this-pc-only" class="d2">Keep a project on this PC only</a><a href="#backups" class="d2">Backups</a><a href="#logs" class="d2">Logs</a><a href="#tray-menu" class="d2">Tray menu</a></aside>
+</div>
+</div>
+<footer class="footer doc-footer"><div class="wrap">
+    <div class="footer-top">
+      <div><h4>Product</h4><ul><li><a href="../../docs/sync/">Sync between devices</a></li><li><a href="../../docs/summaries-and-handoff/">Summaries and handoff</a></li><li><a href="../../docs/search-and-usage/">Search and usage</a></li><li><a href="../../docs/security/">Security</a></li></ul></div>
+      <div><h4>Download</h4><ul><li><a href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Windows</a></li><li><a href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Android app</a></li><li><a href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">Web viewer</a></li><li><a href="../../docs/changelog/">All releases</a></li></ul></div>
+      <div><h4>Docs</h4><ul><li><a href="../../docs/first-time-setup/">First-time setup</a></li><li><a href="../../docs/cli/">CLI reference</a></li><li><a href="../../docs/troubleshooting/">Troubleshooting</a></li><li><a href="../../docs/build-from-source/">Build from source</a></li><li><a href="../../docs/adapter-guide/">Adapter guide</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="mailto:abhichauhan200504@gmail.com">Email</a></li><li><a href="https://linkedin.com/in/abhishek-chauhan-880496394" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://x.com/abh1shxkk" target="_blank" rel="noopener">X</a></li><li><a href="https://github.com/Abh1shxkk" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://abhishekdev.online" target="_blank" rel="noopener">Website</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Abhishek Chauhan</span><a href="../../docs/license/">MIT license</a><a href="../../docs/privacy/">Privacy</a><a href="../../docs/about-the-rename/">About the rename</a><span class="live"><span class="dot ok"></span> Free and open source</span></div>
+  </div></footer>
+</div></div></div></div>
+<div class="d-theme" role="group" aria-label="Theme">
+  <button data-theme-set="light" aria-label="Light"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><button data-theme-set="system" aria-label="System"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></button><button data-theme-set="dark" aria-label="Dark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+</div>
+<div class="d-modal" id="dModal" hidden>
+  <div class="d-modal-box" role="dialog" aria-label="Search the docs">
+    <div class="d-modal-in"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input id="dQ" placeholder="Search the docs…" autocomplete="off" spellcheck="false"><kbd>Esc</kbd></div>
+    <div class="d-results" id="dResults"></div>
+  </div>
+</div>
+<script src="../../assets/docs.js" defer></script>
+</body>
+</html>

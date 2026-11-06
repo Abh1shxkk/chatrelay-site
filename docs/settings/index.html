@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Settings | ChatRelay docs</title>
+  <meta name="description" content="Every setting and what it does.">
+  <link rel="icon" href="../../favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/docs.css">
+  <script>try{var t=localStorage.getItem('chatrelay-docs-theme')||'system';document.documentElement.dataset.theme=t==='system'?(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t}catch(e){}</script>
+</head>
+<body class="docs" data-root="../../" data-title="Settings">
+<div class="d-progress" aria-hidden="true"><i id="dProgress"></i></div>
+<div class="r1"><div class="r2"><div class="r3"><div class="r4">
+<div class="sheet d-sheet">
+<header class="d-head">
+  <div class="d-top">
+    <button class="d-menu" id="dMenu" aria-label="Open menu" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></svg></button>
+    <a class="brand" href="../../"><img src="../../assets/icon.png" alt="" width="26" height="26"> ChatRelay <span class="d-brand-sub">Docs</span></a>
+    <button class="d-search" id="dSearch"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span>Search the docs…</span><kbd>Ctrl</kbd><kbd>K</kbd></button>
+    <nav class="d-links" aria-label="Site"><a href="https://github.com/Abh1shxkk/chatrelay-releases" target="_blank" rel="noopener">GitHub</a><a href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">Web viewer</a><a class="d-dl" href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Download</a></nav>
+  </div>
+  <nav class="d-tabs" aria-label="Sections"><a href="../overview/">Get started</a><a href="../sync/">Using ChatRelay</a><a href="../supported-tools/" class="on" aria-current="true">Reference</a><a href="../security/">Security</a><a href="../troubleshooting/">Help</a><a href="../build-from-source/">Developers</a><a href="../changelog/">Changelog</a></nav>
+</header>
+<div class="d-layout no-toc">
+  <aside class="d-side" id="dSide" aria-label="Reference"><p class="d-side-t">Reference</p><a href="../supported-tools/">Supported AI tools</a><a href="../cli/">CLI reference</a><a href="../settings/" class="on" aria-current="page">Settings</a><a href="../files/">Files it reads and writes</a><a href="../how-it-works/">How it works</a></aside>
+  <main class="d-main">
+    <div class="d-crumbs"><a href="../supported-tools/">Reference</a><span>›</span><span>Settings</span>
+      <div class="d-copy" id="dCopy">
+        <button class="d-copy-main" id="dCopyPage"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span>Copy</span></button><button class="d-copy-more" id="dCopyMore" aria-label="More options" aria-expanded="false"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+        <div class="d-pop" id="dPop" hidden>
+          <button data-act="copy"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="14" height="14" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span><b>Copy page</b><small>Copy this page as Markdown</small></span></button>
+          <a href="index.md" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M9 13h6"/><path d="M9 17h6"/></svg><span><b>View as Markdown</b><small>Open this page as plain text</small></span></a>
+          <hr>
+          <button data-act="chatgpt"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span><b>Open in ChatGPT</b><small>Ask ChatGPT about this page</small></span></button>
+          <button data-act="claude"><img src="../../assets/icons/claude.svg" alt="" width="18" height="18"><span><b>Open in Claude</b><small>Ask Claude about this page</small></span></button>
+          <hr>
+          <button data-act="pdf"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg><span><b>Export as PDF</b><small>Print or save this page</small></span></button>
+        </div>
+      </div>
+    </div>
+    <article class="d-doc">
+      <h1>Settings</h1>
+      <p class="d-lead">Every setting and what it does.</p>
+      <div class="table"><table><thead><tr><th>Section</th><th>Setting</th><th>Meaning</th></tr></thead><tbody><tr><td>This machine</td><td>Machine name</td><td>Shown next to everything this PC uploads</td></tr><tr><td>Sync backend</td><td>Folder / GitHub</td><td>Where history is stored; <strong>Test</strong> checks the connection</td></tr><tr><td>AI tools</td><td>(status)</td><td>Each tool: installed or not, version, format detected, restore on/off, warnings, number of conversations, context file</td></tr><tr><td>Automatic sync</td><td>Auto-sync</td><td>Claude Code hooks, Codex upload a minute after a chat goes quiet, 15-minute background sync</td></tr><tr><td>Automatic sync</td><td>Transcript retention (cleanupPeriodDays)</td><td>How long Claude Code keeps conversations before deleting them</td></tr><tr><td>What to sync</td><td>Subagent transcripts (sidecars)</td><td>Claude Code&#39;s per-session <code>subagents/</code> and <code>tool-results/</code> folders</td></tr><tr><td>What to sync</td><td>Project memory</td><td>Claude Code&#39;s per-project memory folder (<code>memory/</code>)</td></tr><tr><td>What to sync</td><td>Secret scan before upload</td><td>Off / Warn / Auto-redact</td></tr><tr><td>What to sync</td><td>Versions kept (folder backend)</td><td>Previous copies of each file kept by the folder backend</td></tr><tr><td>Encryption (GitHub)</td><td>Password</td><td>Turns on end-to-end encryption, or unlocks an encrypted history on this PC; <strong>Encrypt files stored before</strong></td></tr><tr><td>Storage (GitHub)</td><td>Remove old versions</td><td>Shows the repository&#39;s size and deletes old versions from its history (every current conversation is kept)</td></tr><tr><td>Secrets</td><td>GitHub token, Anthropic API key, OpenRouter API key, GitHub gist token</td><td>Stored in the OS keychain (<strong>Remove from keychain</strong> deletes one)</td></tr><tr><td>Summaries</td><td>Default model</td><td>Model used for summaries</td></tr><tr><td>Never send</td><td>List</td><td>Words and values hidden from summaries and shared conversations, on top of secrets and <code>.env</code> values</td></tr><tr><td>Appearance</td><td>Theme</td><td>Dark / light</td></tr><tr><td>About</td><td>Version, Check for updates</td><td></td></tr></tbody></table></div>
+<p>The same settings from the command line: <code>chatrelay config [key] [value]</code>, for example <code>config machineName DESK-1</code>, <code>config backend.folder &quot;G:\My Drive\chatrelay&quot;</code>, <code>config backend.github me/my-history</code>, <code>config secretScan redact</code>.</p>
+
+    </article>
+    <nav class="d-pager" aria-label="Previous and next page">
+      <a class="pv" href="../cli/"><span class="d-arrow"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></svg></span><span class="d-pg"><small>Previous</small><b>CLI reference</b></span></a>
+      <a class="nx" href="../files/"><span class="d-pg"><small>Next</small><b>Files it reads and writes</b></span><span class="d-arrow"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
+    </nav>
+  </main>
+  
+</div>
+</div>
+<footer class="footer doc-footer"><div class="wrap">
+    <div class="footer-top">
+      <div><h4>Product</h4><ul><li><a href="../../docs/sync/">Sync between devices</a></li><li><a href="../../docs/summaries-and-handoff/">Summaries and handoff</a></li><li><a href="../../docs/search-and-usage/">Search and usage</a></li><li><a href="../../docs/security/">Security</a></li></ul></div>
+      <div><h4>Download</h4><ul><li><a href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Windows</a></li><li><a href="https://github.com/Abh1shxkk/chatrelay-releases/releases/latest" target="_blank" rel="noopener">Android app</a></li><li><a href="https://abh1shxkk.github.io/chatrelay-web/" target="_blank" rel="noopener">Web viewer</a></li><li><a href="../../docs/changelog/">All releases</a></li></ul></div>
+      <div><h4>Docs</h4><ul><li><a href="../../docs/first-time-setup/">First-time setup</a></li><li><a href="../../docs/cli/">CLI reference</a></li><li><a href="../../docs/troubleshooting/">Troubleshooting</a></li><li><a href="../../docs/build-from-source/">Build from source</a></li><li><a href="../../docs/adapter-guide/">Adapter guide</a></li></ul></div>
+      <div><h4>Connect</h4><ul><li><a href="mailto:abhichauhan200504@gmail.com">Email</a></li><li><a href="https://linkedin.com/in/abhishek-chauhan-880496394" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://x.com/abh1shxkk" target="_blank" rel="noopener">X</a></li><li><a href="https://github.com/Abh1shxkk" target="_blank" rel="noopener">GitHub</a></li><li><a href="https://abhishekdev.online" target="_blank" rel="noopener">Website</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Abhishek Chauhan</span><a href="../../docs/license/">MIT license</a><a href="../../docs/privacy/">Privacy</a><a href="../../docs/about-the-rename/">About the rename</a><span class="live"><span class="dot ok"></span> Free and open source</span></div>
+  </div></footer>
+</div></div></div></div>
+<div class="d-theme" role="group" aria-label="Theme">
+  <button data-theme-set="light" aria-label="Light"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><button data-theme-set="system" aria-label="System"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></button><button data-theme-set="dark" aria-label="Dark"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+</div>
+<div class="d-modal" id="dModal" hidden>
+  <div class="d-modal-box" role="dialog" aria-label="Search the docs">
+    <div class="d-modal-in"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input id="dQ" placeholder="Search the docs…" autocomplete="off" spellcheck="false"><kbd>Esc</kbd></div>
+    <div class="d-results" id="dResults"></div>
+  </div>
+</div>
+<script src="../../assets/docs.js" defer></script>
+</body>
+</html>

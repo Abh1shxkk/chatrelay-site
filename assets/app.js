@@ -1,6 +1,6 @@
 // ChatRelay landing page interactions
 (() => {
-  // Preview a stripe palette with ?palette=forest|plum|mono|sunset
+  // Preview a stripe palette with ?palette=forest|plum|mono|ocean
   const pal = new URLSearchParams(location.search).get('palette');
   if (pal) document.documentElement.dataset.palette = pal;
 
@@ -79,7 +79,7 @@
   // Hero usage chart: 30 stacked bars by tool
   const bars = document.getElementById('heroBars');
   if (bars) {
-    const tools = [['--c-claude', 0.55], ['--c-codex', 0.25], ['--c-cursor', 0.12], ['--c-kiro', 0.08]];
+    const tools = [['--c-claude', 0.4], ['--c-codex', 0.25], ['--c-cursor', 0.13], ['--c-kiro', 0.1], ['--c-antigravity', 0.12]];
     for (let d = 0; d < 30; d++) {
       const weekend = d % 7 === 5 || d % 7 === 6;
       const total = weekend ? 8 + rnd() * 22 : 35 + rnd() * 65;
@@ -155,7 +155,7 @@
   if (typed && !reduced) {
     const line = typed.closest('.type-line');
     const caret = line.querySelector('.type-caret');
-    const phrases = ['on every PC.', 'in every tool.', 'in Claude Code.', 'in Codex.', 'on your phone.'];
+    const phrases = ['on every device.', 'in Claude Code.', 'in Codex.', 'in Cursor.', 'in Kiro.', 'in Antigravity.', 'on your phone.'];
     let p = 0;
     let n = 0;
     let chars = [];
@@ -239,9 +239,15 @@
       { row: 'a', status: 'Uploading…', say: 'Only the new lines travel: 14 lines, 6 KB.', now: 'Uploading to me/ai-history' },
       { say: 'Secret scan: 1 token found, redacted in the upload.', now: 'Uploading to me/ai-history' },
       { row: 'a', status: 'Synced', say: 'Uploaded as one commit.', now: 'Looking for new chats' },
-      { row: 'b', status: 'Pulling…', say: 'New Codex thread from OFFICE-PC.', now: 'Backing up, then pulling' },
+      { row: 'b', status: 'Pulling…', say: 'New Codex thread from DESKTOP.', now: 'Backing up, then pulling' },
       { say: 'Rewrote 166 paths to D:\\work\\shop.', now: 'Writing the thread' },
-      { row: 'b', status: 'Synced', say: 'Done. Run codex resume to continue.' },
+      { row: 'b', status: 'Synced', say: 'Codex thread restored on this device.', now: 'Checking other tools' },
+      { row: 'c', status: 'Uploading…', say: 'Cursor chat changed, uploading it.', now: 'Uploading to me/ai-history' },
+      { row: 'c', status: 'Synced', say: 'Cursor chat ready on web and phone.', now: 'Checking other tools' },
+      { row: 'd', status: 'Uploading…', say: 'New Kiro CLI chat, uploading it.', now: 'Uploading to me/ai-history' },
+      { row: 'd', status: 'Synced', say: 'Kiro chat ready on web and phone.', now: 'Checking other tools' },
+      { row: 'e', status: 'Uploading…', say: 'Antigravity conversation changed.', now: 'Uploading to me/ai-history' },
+      { row: 'e', status: 'Synced', say: 'All five tools are up to date.' },
     ];
     if (reduced) {
       steps.forEach((s) => { say(s.say); if (s.row) setRow(s.row, s.status, false); });
@@ -341,11 +347,14 @@
     const pipe = [...document.querySelectorAll('#pipe > *')];
     const countEl = document.getElementById('healthCount');
     const pool = [
-      ['eye', 'Upload from OFFICE-PC', 'Originals only read'],
+      ['eye', 'Upload from DESKTOP', 'Originals only read'],
       ['file', 'Pull into D:\\work\\shop', 'Dry run shown first'],
-      ['merge', 'Changed on both PCs', 'Both kept'],
+      ['merge', 'Changed on both devices', 'Both kept'],
       ['key', 'Token found in a chat', 'Redacted'],
       ['pause', 'Codex is running', 'Skipped, retried later'],
+      ['eye', 'Cursor chat uploaded', 'Stays read-only'],
+      ['eye', 'Kiro CLI chat uploaded', 'Stays read-only'],
+      ['eye', 'Antigravity chat uploaded', 'Stays read-only'],
       ['history', 'settings.json about to change', 'Backed up'],
       ['lock', 'Upload to GitHub', 'Encrypted'],
       ['branch', 'Public repository chosen', 'Refused'],
